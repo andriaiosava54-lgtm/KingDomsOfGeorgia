@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KingDomsOfGeorgia — ოფიციალური ფორუმი</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Noto+Sans+Georgian:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #050203;
+            --bg-card: linear-gradient(145deg, #180306, #090204);
+            --bg-card-hover: linear-gradient(145deg, #2c050b, #120306);
+            --accent-red: #dc2626;
+            --accent-gold: #eab308;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: rgba(220, 38, 38, 0.25);
+            --border-glow: rgba(220, 38, 38, 0.7);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans Georgian', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(220, 38, 38, 0.18), transparent 70%),
+                radial-gradient(circle at 80% 50%, rgba(153, 27, 27, 0.12), transparent 50%);
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        /* Glow & Hover Animations */
+        .rule-item, .topic-card, .sidebar-card, .hero-banner {
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        /* Mouse Hover Motion & Glow Effect */
+        .rule-item:hover {
+            transform: translateY(-4px) scale(1.01);
+            border-color: var(--border-glow);
+            box-shadow: 0 8px 25px rgba(220, 38, 38, 0.35), 0 0 15px rgba(220, 38, 38, 0.2);
+        }
+
+        .topic-card:hover {
+            transform: translateX(6px) translateY(-2px);
+            background: var(--bg-card-hover);
+            border-color: var(--border-glow);
+            box-shadow: 0 6px 20px rgba(220, 38, 38, 0.3);
+        }
+
+        .navbar {
+            background: rgba(7, 2, 4, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 0.8rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .logo i {
+            color: var(--accent-gold);
+            filter: drop-shadow(0 0 8px rgba(234, 179, 8, 0.6
